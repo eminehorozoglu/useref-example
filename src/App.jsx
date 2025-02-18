@@ -1,13 +1,16 @@
-import { useRef } from "react";
+import { useRef,useEffect,useState } from "react";
 
 
 export default function App(){
+
 
   const ref = useRef(0);
   console.log(ref);
   const inputref1 = useRef(null);
   const inputref2 = useRef(null);
   const inputref3 = useRef(null);
+
+
 
 function handleclick (){
  ref.current =ref.current + 1;
@@ -37,10 +40,22 @@ inputref3.current.style.backgroundColor = "";
     
      }
 
+      const [inputValue, setInputValue] = useState("");
+      const count = useRef(0);
+      useEffect(() => {
+        count.current = count.current + 1;
+      });   
+
   return (
     <>
-    <h1>home page</h1>
-    <button onClick={handleclick}>click me!</button>
+    <h1>UseRef Examples</h1>
+    <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+    <button onClick={handleclick}>click me and see the messagge!</button>
     <h1>Another Example</h1>
     <button onClick={handleclick1}>click me-1</button>
     <input ref={inputref1}></input>
@@ -48,6 +63,11 @@ inputref3.current.style.backgroundColor = "";
     <input ref={inputref2}></input>
     <button onClick={handleclick3}>click me-3</button>
     <input ref={inputref3}></input>
+
+    
     </>
+
+
+
   )
 }
