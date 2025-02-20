@@ -22,10 +22,13 @@ We reach the reference value with "Ref.current" and we can change this value whe
 
 What sources did we use?
 
-[React website](https://react.dev/reference/react/useRef)
-[w3schools website](https://www.w3schools.com/react/react_useref.asp)
-[geeksforgeeks website](https://www.geeksforgeeks.org/react-js-useref-hook/)
-Youtube videos for sample code
+- [React website](https://react.dev/reference/react/useRef)
+
+- [w3schools website](https://www.w3schools.com/react/react_useref.asp)
+
+- [geeksforgeeks website](https://www.geeksforgeeks.org/react-js-useref-hook/)
+
+- Youtube videos for sample code
 
 Project Plan :
 
