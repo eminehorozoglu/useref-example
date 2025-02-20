@@ -19,6 +19,13 @@ On the next renders, useRef will return the same object.
 
 We reach the reference value with "Ref.current" and we can change this value whenever we want.
 
+- Manipulating the DOM with a ref:
+
+If we want to manipulate the DOM, we throw the "ref" into the DOM element we want. After React creates the DOM node and puts it on the screen, React will set the current property of your ref object to that DOM node. We can access the DOM element node and call methods like focus().
+Ref.current.focus();
+
+
+
 
 What sources did we use?
 
