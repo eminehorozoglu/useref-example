@@ -3,9 +3,11 @@ import { useRef,useEffect,useState } from "react";
 
 export default function App(){
   const ref = useRef(0);
+  console.log (ref);
   function handleclick (){
     ref.current = ref.current + 1
     alert(`You clicked ${ref.current} times`)
+    console.log (`Ref: ${ref.current}`);
   }
 
   const inputref1 = useRef(null);
@@ -47,14 +49,18 @@ inputref3.current.style.backgroundColor = "";
     <>
     <h1>UseRef Examples</h1>
     <button onClick={handleclick}>Click to see the message</button>
- 
+    <p>Ref Value :{ref.current}</p>
+    
     <h1>Another Example</h1>
-    <button onClick={handleclick1}>click me-1</button>
     <input ref={inputref1}></input>
-    <button onClick={handleclick2}>click me-2</button>
+    <button onClick={handleclick1}>click me-1</button>
     <input ref={inputref2}></input>
-    <button onClick={handleclick3}>click me-3</button>
+    <button onClick={handleclick2}>click me-2</button>
     <input ref={inputref3}></input>
+    <button onClick={handleclick3}>click me-3</button>
+
+
+
     <p></p>
     <input type="text" value={inputValue} onChange={(counter)=>(setValue(counter.target.value))}/>
     <h1>Render Count: {count.current}</h1>
